@@ -6,10 +6,12 @@ import org.openqa.selenium.support.How;
 
 public class LoginPagePom {
    //WebElement-->Loginpage webpage
-	@FindBy(how=How.XPATH,using="//input[@id='emai']")
+	@FindBy(how=How.XPATH,using="//input[@id='email']")
 	private WebElement txt_email;
 	
-	@FindBy(how=How.XPATH,using="//input[@id='pass']")
+	//@FindBy(how=How.XPATH,using="//input[@id='pass']")
+	//private WebElement txt_password;
+	@FindBy(how=How.XPATH,using="//input[@id='pass'")
 	private WebElement txt_password;
 	
 	@FindBy(how=How.XPATH,using="//button[@name='login']")
@@ -28,4 +30,6 @@ public class LoginPagePom {
 		return btn_click;
 	}
 
+	
+	
 }

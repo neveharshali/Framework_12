@@ -1,5 +1,7 @@
 package com.Utility;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -21,10 +23,11 @@ public class BaseClass {
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		 driver=new ChromeDriver();
-		//driver.get(config.get_BaseUrl_QA1());
-		 driver.get(config.get_BaseUrl_QA2());
+		driver.get(config.get_BaseUrl_QA1());
+		// driver.get(config.get_BaseUrl_QA2());
 		 //driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	

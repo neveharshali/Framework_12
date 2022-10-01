@@ -1,6 +1,9 @@
 package com.Test;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.PageObject.LoginPagePom;
@@ -18,6 +21,15 @@ public class TC_002 extends BaseClass {
 		//login.getTxt_email().sendKeys(excel.getStringData("Sheet1", 0, 0));
 		//login.getTxt_password().sendKeys(excel.getStringData("Sheet1", 0, 1));
 		//login.getBtn_click();
+		
+		//WebDriverWait wait=new WebDriverWait(driver,10);
+		//wait.until(ExpectedConditions.visibilityOf(login.getBtn_click()));
+		
+		//Library.getExplicitlywait(driver, 10,login.getTxt_email());
+		//Library.getExplicitlywait(driver, 5, login.getTxt_password());
+		//Library.getExplicitlywait(driver, 10,login.getBtn_click() );
+		
+		Library.custom_HandleDropDown(null, null);
 	}
 
 }

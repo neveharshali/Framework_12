@@ -13,12 +13,15 @@ public class TC_001 extends BaseClass {
 	@Test
 	public void Verify_TestLogin_validCredential() {
 		//WebElement
+		//LoginPagePom login=PageFactory.initElements(driver, LoginPagePom.class);
 		LoginPagePom login=PageFactory.initElements(driver, LoginPagePom.class);
+		//login.getTxt_email().sendKeys(null);
 		//login.getTxt_email().sendKeys("Test@gmail.com");
 		//login.getTxt_password().sendKeys("13456");
 		//login.getBtn_click();
 		
 		//excel testdata
+		//login.getTxt_email().sendKeys(excel.getStringData("Sheet 1", 0, 0));
 		login.getTxt_email().sendKeys(excel.getStringData("Sheet1", 0, 0));
 		login.getTxt_password().sendKeys(excel.getStringData("Sheet1", 0, 1));
 		login.getBtn_click();
